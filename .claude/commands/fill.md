@@ -111,6 +111,7 @@ If any check fails, fix it before reporting ready.
 3. **Sufficient vs missing field:**
    - sufficient=Yes → missing field MUST be empty. Never leave stale text.
    - sufficient=No → missing field MUST be populated, AND the overall rationale should acknowledge that the missing concern is NOT being used to lower the rating (otherwise it looks like you double counted)
+   - **Sufficient recheck (mandatory before reporting ready).** Re-walk the same prompt-clause and defect lists recorded in the `Sufficient check:` block of `rubrics.md` against the live form state. If `rubrics.md` has no `Sufficient check:` block, stop — the run.md Phase 3 step was skipped and the answer is unverified. If during filling you discovered any new defect not covered by a rubric (e.g. a stale field, an off-spec value caught by the verify dump), flip sufficient to **No**, populate the missing field, and add the "not used to lower the rating" disclaimer to the overall rationale before reporting ready.
 4. **Each rubric rationale must align with its Pass/Fail.** Do not write a rationale that describes a failure on a rubric marked Pass without explicitly noting why it still passes the literal criterion (and pointing to the overall rationale for the consequence).
 5. **No two fields may contradict each other.** If you mention a defect in any rationale, the overall rationale must reflect it consistently.
 

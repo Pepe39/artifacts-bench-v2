@@ -90,7 +90,12 @@ Always run the artifact locally inside the task folder. The Feather Live Preview
 9. Read `source.tsx` and verify state management, event handlers, types, no direct mutations, edge case handling.
 10. Optionally cross check against the Feather Live Preview tab.
 11. Update `rubrics.md` with results, overall rating, overall rationale, and the "rubrics sufficient" answer.
-12. **Run the cross field consistency checklist from `fill.md` against `rubrics.md` BEFORE moving on.** Specifically:
+12. **Sufficient double-check (mandatory).** Before locking in Yes/No, walk the prompt clause by clause and the artifact defect by defect:
+    - Read the prompt one more time and list every literal requirement. For each, point to the rubric number that covers it. If any requirement has no rubric → **No**, and that requirement is what goes into the missing field.
+    - List every defect/observation found during local testing (visual glitches, console errors, broken edge cases, accessibility issues, UX papercuts, off-spec colors/sizes, hover/keyboard/responsive bugs). For each, point to the rubric that would catch it. If any defect is real but no rubric captures it → **No**, and describe it in the missing field.
+    - Default is **Yes** only when both lists above are fully covered. If you mark **No**, the overall rationale MUST explicitly state that the missing concern is NOT being used to lower the rating (otherwise it looks like double counting).
+    - Record the result of this walk inline in `rubrics.md` (a short "Sufficient check:" block listing the prompt clauses and defects you considered) so the next pass can verify.
+13. **Run the cross field consistency checklist from `fill.md` against `rubrics.md` BEFORE moving on.** Specifically:
     - Pass/Fail counts must justify the rating. All Pass + rating < 3 requires explicit polish/UX reason in the overall rationale.
     - Each rubric rationale must align with its Pass/Fail. If you describe a defect on a Pass rubric, explicitly note why it still passes the literal criterion and defer the consequence to the overall rationale.
     - sufficient=Yes → missing field empty. sufficient=No → missing field populated AND overall rationale must state the missing concern is NOT being used to lower the rating.
