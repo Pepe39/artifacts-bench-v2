@@ -159,6 +159,7 @@ Then write `feedback_to_attempter.md` in the review folder. It must contain:
 - One short paragraph (4 to 8 sentences) in English, in past tense (the corrections were already applied or sent back, so describe the mistakes as past), naming the specific rubrics that were wrong and what the actual behavior was
 - At least one sentence thanking the attempter for their strong work
 - Wording rule applies (no em dashes, no hyphens as connectors, no `;`/`:` sentence structures, plain short sentences)
+- **Functionality only, no code references.** Describe what the user sees or experiences when interacting with the artifact (clicked play and nothing happened, dragged the volume slider and gain did not change, drew on the canvas and no shape appeared). Do NOT mention source code constructs (line numbers, function names, variable names, TDZ, ReferenceError, listeners, file paths, or specific APIs). Code level evidence belongs in `review.md`, not in feedback to the attempter.
 
 `progress.md` → `CURRENT_STEP: reported`.
 
